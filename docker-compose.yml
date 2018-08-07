@@ -1,7 +1,12 @@
 version: '2'
 services:
-    data:
-      image: events
+    events:
+        image: events:latest
+
+    website:
+        image: php:apache
+        ports:
+           - 5001:80
 
     mongodb:
         image: mongo:latest
